@@ -1,3 +1,10 @@
+
+
+/*fetch api hora
+fetch("http://api.weatherunlocked.com/api/forecast/51.50,-0.12?app_id={52a6ece7}&app_key={bda12ad0394f8e1615e6153ace692a9a}")
+.then(response => response.json())
+.then(data => console.log(data))*/
+
 // Variables
 const baseDeDatos = [
     {
@@ -188,40 +195,5 @@ $('#myModal').on('shown.bs.modal', function () {
     $('#myInput').trigger('focus')
   })
 
-// API clima
- 
-let app = {};
 
-//nuestra api key
 
-app.apikey = "1619b43ba411ce5715f2cd29c71b79cf";
-
-//en la URL indicamos la ciudad, en este ejemplo q=Malaga
-
-app.url = "https://openweathermap.org/city/3435910"
-
-app.cargaDatos = function(){
-
-    $.ajax({
-    
-    url: app.url,
-    
-    success: function( data ) {
-    
-    
-    app.datos = data;
-
-    console.log (app.procesaDatos())
-    
-    },
-    
-    //para los errores
-    error: function(){
-    
-    alert("¡Ups! No puedo obtener información de la API");
-    
-    }
-    
-    });
-    
-    }
