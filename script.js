@@ -196,4 +196,15 @@ $('#myModal').on('shown.bs.modal', function () {
   })
 
 
+/*API clima*/
+let  API_URL = 'https://api.tomorrow.io/v4/timelines?location=-73.98529171943665,40.75872069597532&fields=temperature&timesteps=1h&units=metric&apikey=i1CLD6IVRRNhOjI4bghO32Fk1p3aGPTP';
+
+async function ConsumirOtraAPI(){
+
+  fetch(API_URL)
+  .then(response => response.json())
+  .then(data => console.log(data));
+
+} 
+
 

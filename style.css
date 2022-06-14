@@ -44,7 +44,7 @@
 				
 			}
 			
-			}
+			
 			.list-group{
 				background-color: aliceblue;
 			}
@@ -57,4 +57,40 @@
 			.col-sm-4{
 				justify-content: space-around
 			}
+			footer {
+    
+				padding: 10px;
+				text-align: center;
+				text-align-last: center;
+				border-color: white;
+			
+			}
+			
+				.logoTw{
+					width: 20px;
+					height: 20px;
+					border-radius: 10px;
+					
+				}   
+					
+				.logoWhasap{
+					width: 20px;
+					height: 20px;
+					border-radius: 10px;
+				}
+				
+					
+				.logoIG{
+					width: 20px;
+					height: 20px;
+					border-radius: 10px;
+				}   
+				
+			h6{
+				background-color: white;
+				margin-left: 550px;
+				margin-right: 550px;
+				-webkit-text-stroke: 0.5px black;
+			}
+				
 
