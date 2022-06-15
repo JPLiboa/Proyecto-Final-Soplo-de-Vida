@@ -169,15 +169,21 @@ $('#myModal').on('shown.bs.modal', function () {
 
 /*API clima*/
 
-
-let  API_URL = 'https://api.tomorrow.io/v4/timelines?location=-73.98529171943665,40.75872069597532&fields=temperature&timesteps=1h&units=metric&apikey=i1CLD6IVRRNhOjI4bghO32Fk1p3aGPTP';
+let  API_URL = 'https://api.tomorrow.io/v4/timelines?location=-34.6037232,-58.3815931&fields=temperature&timesteps=1h&units=metric&apikey=i1CLD6IVRRNhOjI4bghO32Fk1p3aGPTP';
+let infoAPI;
+let lblTemperatura = document.getElementById('Temperatura');
 
 async function ConsumirOtraAPI(){
 
-  fetch(API_URL)
+  await fetch(API_URL)
   .then(response => response.json())
-  .then(data => console.log(data));
+  .then(data => infoAPI = data);
+  
+  lblTemperatura.innerHTML ='La temperatura en Buenos Aires es de: ' +  infoAPI['data']['timelines'][0].intervals[0].values.temperature;
 
-} 
+}  
+
+
+//.then(data => console.log(data));
 
 
